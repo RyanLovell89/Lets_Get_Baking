@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets Get Baking</title>
+</head>
+<body>
+    {% for recipe in recipes %}
+        {{ recipe.recipe_name }}<br>
+        {{ recipe.recipe_description }}<br>
+        {{ recipe.baking_time }}<br>
+        {{ recipe.preparation_time }}<br>
+        {{ recipe.ingredient_one }}<br>
+        {{ recipe.ingredient_two }}<br>
+        {{ recipe.ingredient_three }}<br>
+        {{ recipe.ingredient_four }}<br>
+        {{ recipe.ingredient_five }}<br>
+        {{ recipe.ingredient_six }}<br>
+        {{ recipe.ingredient_seven }}<br>
+        {{ recipe.ingredient_eight }}<br>
+        {{ recipe.weight_one }}<br>
+        {{ recipe.weight_two }}<br>
+        {{ recipe.weight_three }}<br>
+        {{ recipe.weight_four }}<br>
+        {{ recipe.weight_five }}<br>
+        {{ recipe.weight_six }}<br>
+        {{ recipe.weight_seven }}<br>
+        {{ recipe.weight_eight }}<br>
+        {{ recipe.instruction_one }}<br>
+        {{ recipe.instruction_two }}<br>
+        {{ recipe.instruction_three }}<br>
+        {{ recipe.instruction_four }}<br>
+        {{ recipe.instruction_five }}<br>
+        {{ recipe.instruction_six }}<br>
+        {{ recipe.instruction_seven }}<br>
+        {{ recipe.instruction_eight }}<br>
+    {% endfor %}
+</body>
+</html>
