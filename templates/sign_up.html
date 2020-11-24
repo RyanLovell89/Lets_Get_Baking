@@ -1,21 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="col s12 m8 offset-m2">
-    <h2 class="header center-align text-color">Sign Up</h2>
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="static/images/Vanilla-cupcakes.jpg">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="row">
+    <form class="col s12 m8 offset-m2">
+        <h2 class="header center-align text-color">Sign Up</h2>
+            <div class="card horizontal grey lighten-3">
+                <div class="card-image">
+                    <img src="static/images/Vanilla-cupcakes.jpg">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <!-- username -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="fas fa-user prefix"></i>
+                                <input id="username" name="username" type="text" class="validate">
+                                <label for="username">Username</label>
+                            </div>
+                        </div>
+                        <!-- password -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="fas fa-lock prefix"></i>
+                                <input id="password" name="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <!-- sign up -->
+                        <div class="row">
+                            <button type="submit" class="col s12 btn-large purple darken-2">
+                                Sign Up
+                            </button>
+                        </div>
+                        <div class="row">
+                            <p class="center-align">
+                                Already signed up, <a href="#">Log In Here</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+</div>
 
 {% endblock %}
