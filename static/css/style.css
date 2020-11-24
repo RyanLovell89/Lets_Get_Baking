@@ -9,3 +9,21 @@
 .text-color {
     color: #7b1fa2;
 }
+
+/* flash messages */
+
+.flashes h4 {
+    line-height: 3px;
+}
+
+/* footer */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
