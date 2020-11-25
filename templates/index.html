@@ -1,35 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="row">
+    <h4 class="center-align">Welcome to Let's Get Baking!</h4>
+    <p class="center-align">
+        Everyone enjoys cakes, baking and eating them.
+        On this website you can add your own recipes and share them with everbody or you can just browse
+        the recipe book and bake the recipes already shared.<br>
+        <strong>Come on! Let's Get Baking!</strong>
+    </p>
+</div>
+
     {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.recipe_description }}<br>
-        {{ recipe.baking_time }}<br>
-        {{ recipe.preparation_time }}<br>
-        {{ recipe.ingredient_one }}<br>
-        {{ recipe.ingredient_two }}<br>
-        {{ recipe.ingredient_three }}<br>
-        {{ recipe.ingredient_four }}<br>
-        {{ recipe.ingredient_five }}<br>
-        {{ recipe.ingredient_six }}<br>
-        {{ recipe.ingredient_seven }}<br>
-        {{ recipe.ingredient_eight }}<br>
-        {{ recipe.weight_one }}<br>
-        {{ recipe.weight_two }}<br>
-        {{ recipe.weight_three }}<br>
-        {{ recipe.weight_four }}<br>
-        {{ recipe.weight_five }}<br>
-        {{ recipe.weight_six }}<br>
-        {{ recipe.weight_seven }}<br>
-        {{ recipe.weight_eight }}<br>
-        {{ recipe.instruction_one }}<br>
-        {{ recipe.instruction_two }}<br>
-        {{ recipe.instruction_three }}<br>
-        {{ recipe.instruction_four }}<br>
-        {{ recipe.instruction_five }}<br>
-        {{ recipe.instruction_six }}<br>
-        {{ recipe.instruction_seven }}<br>
-        {{ recipe.instruction_eight }}<br>
+        <h5>Recipe Name</h5>
+            {{ recipe.recipe_name }}
+        <h5>Recipe Description</h5>
+            {{ recipe.recipe_description }}
+        <h5>Baking Time (mins)</h5>
+            {{ recipe.baking_time }}
+        <h5>Preparation Time (mins)</h5>
+            {{ recipe.preparation_time }}
+        <h5>Ingredients</h5>
+        <ol>
+            <li>{{ recipe.ingredient_one }} - {{ recipe.weight_one }}</li>
+            <li>{{ recipe.ingredient_two }}</li>
+            <li>{{ recipe.ingredient_three }}</li>
+            <li>{{ recipe.ingredient_four }}</li>
+            <li>{{ recipe.ingredient_five }}</li>
+            <li>{{ recipe.ingredient_six }}</li>
+            <li>{{ recipe.ingredient_seven }}</li>
+            <li>{{ recipe.ingredient_eight }}</li>
+            <li>{{ recipe.weight_one }}</li>
+            <li>{{ recipe.weight_two }}</li>
+            <li>{{ recipe.weight_three }}</li>
+            <li>{{ recipe.weight_four }}</li>
+            <li>{{ recipe.weight_five }}</li>
+            <li>{{ recipe.weight_six }}</li>
+            <li>{{ recipe.weight_seven }}</li>
+            <li>{{ recipe.weight_eight }}</li>
+            <li>{{ recipe.instruction_one }}</li>
+            <li>{{ recipe.instruction_two }}</li>
+            <li>{{ recipe.instruction_three }}</li>
+            <li>{{ recipe.instruction_four }}</li>
+            <li>{{ recipe.instruction_five }}</li>
+            <li>{{ recipe.instruction_six }}</li>
+            <li>{{ recipe.instruction_seven }}</li>
+            <li>{{ recipe.instruction_eight }}</li>
+        </ol>
     {% endfor %}
+
 
 {% endblock %}
