@@ -48,6 +48,7 @@ def sign_up():
         # places the user into a session cookie
         session["user"] = request.form.get("username").lower()
         flash("Sign Up Successful")
+        return redirect(url_for("profile", username=session["user"]))
     return render_template("sign_up.html")
 
 
@@ -63,8 +64,11 @@ def login():
             # checks to see if the username and password match
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # message to tell user, username and password don't match
                 flash("Username and/or password incorrect")
@@ -74,6 +78,13 @@ def login():
             # username is not in the mongo database
             flash("Username and/or password incorrect")
     return render_template("login.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
 
 
 if __name__ == "__main__":
