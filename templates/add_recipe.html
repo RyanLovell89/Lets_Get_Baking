@@ -3,8 +3,8 @@
 
     <h3 class="center-align">Add Recipe</h3>
     
-    <div class="row">
-            <form class="col s12" method="POST" action="">
+    <div class="row card-panel grey lighten-3">
+            <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
                 <div class="row">
                 <!-- recipe name -->
                     <div class="input-field col s12">
@@ -45,7 +45,7 @@
                 <!-- ingredient -->
                     <div class="col s6">
                         <i class="fas fa-egg prefix"></i>
-                        <input id="ingredient_one" name="ingredient_one" minlength="1" maxlength="30"
+                        <input id="ingredient_one" name="ingredient_one" minlength="1" maxlength="50"
                              type="text" class="validate" required>
                         <label for="ingredient_one">Ingredient</label>
                     </div>
@@ -59,12 +59,19 @@
                 </div>
                 <h4>Cooking Instructions</h4>
                 <div class="row">
-                <!-- intruction -->
+                <!-- instruction -->
                     <div class="input-field col s12">
                         <i class="fas fa-pen prefix"></i>
                         <textarea id="instruction_one" name="instruction_one" minlength="5"
                              maxlength="300" class="materialize-textarea" required></textarea>
                         <label for="instruction_one">Step 1</label>
+                    </div>
+                </div>
+                <div class="row">
+                <!-- submit and reset button -->
+                    <div class="col s12 center-align">
+                        <button type="submit" class="col s6 btn-large purple darken-2">Add Recipe</button>
+                        <button type="reset" class="col s6 btn-large red darken-1">Reset</button>
                     </div>
                 </div>
             </form>

@@ -23,24 +23,8 @@
         <h5>Ingredients</h5>
         <ol>
             <li>{{ recipe.ingredient_one }} - {{ recipe.weight_one }}</li>
-            <li>{{ recipe.ingredient_two }}</li>
-            <li>{{ recipe.ingredient_three }}</li>
-            <li>{{ recipe.ingredient_four }}</li>
-            <li>{{ recipe.ingredient_five }}</li>
-            <li>{{ recipe.ingredient_six }}</li>
-            <li>{{ recipe.ingredient_seven }}</li>
-            <li>{{ recipe.weight_one }}</li>
-            <li>{{ recipe.weight_two }}</li>
-            <li>{{ recipe.weight_three }}</li>
-            <li>{{ recipe.weight_four }}</li>
-            <li>{{ recipe.weight_five }}</li>
-            <li>{{ recipe.weight_six }}</li>
-            <li>{{ recipe.weight_seven }}</li>
-            <li>{{ recipe.instruction_one }}</li>
-            <li>{{ recipe.instruction_two }}</li>
-            <li>{{ recipe.instruction_three }}</li>
-            <li>{{ recipe.instruction_four }}</li>
         </ol>
+        <p>Added by:<strong> {{ recipe.added_by }}</strong></p>
     {% endfor %}
 
 
