@@ -120,6 +120,14 @@ def add_recipe():
     return render_template("add_recipe.html")
 
 
+# search function
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = (mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("search.html", recipes=recipes)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
