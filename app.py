@@ -121,11 +121,11 @@ def add_recipe():
 
 
 # search function
-@app.route("/search", methods=["GET", "POST"])
-def search():
+@app.route("/recipe_book", methods=["GET", "POST"])
+def recipe_book():
     query = request.form.get("query")
     recipes = (mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("search.html", recipes=recipes)
+    return render_template("recipe_book.html", recipes=recipes)
 
 
 if __name__ == "__main__":

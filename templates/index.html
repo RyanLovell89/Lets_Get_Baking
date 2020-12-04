@@ -11,7 +11,8 @@
     </p>
 </div>
 
-    <!-- {% for recipe in recipes %}
+<div>
+    {% for recipe in recipes %}
         <h5>Recipe Name</h5>
             {{ recipe.recipe_name }}
         <h5>Recipe Description</h5>
@@ -25,7 +26,7 @@
             <li>{{ recipe.ingredient_one }} - {{ recipe.weight_one }}</li>
         </ol>
         <p>Added by:<strong> {{ recipe.added_by }}</strong></p>
-    {% endfor %} -->
-
+    {% endfor %}
+</div>
 
 {% endblock %}
