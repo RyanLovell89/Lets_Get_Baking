@@ -4,17 +4,28 @@
 <h2 class="header center-align">Recipe Book</h2>
 
 <div>
+    <p class="center-align">
+        Here you can see all the recipes that have been added.
+    </p>
+</div>
+
+<div>
     <ul class="collapsible popout">
         {% for recipe in recipes %}
         <li>
             <div class="collapsible-header grey lighten-3">
-                <h6>{{ recipe.recipe_name }}</h6>
+                <div class="col s3">
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="col s6">
+                    <h6 class="recipe_name_heading">{{ recipe.recipe_name }}</h6>
+                    <p>
+                        <strong>Recipe Description</strong><br>
+                        {{ recipe.recipe_description }}
+                    </p>
+                </div>
             </div>
             <div class="collapsible-body"><span></span>
-                <p>
-                    <strong>Recipe Description</strong><br>
-                    {{ recipe.recipe_description }}
-                </p>
                 <p>
                     <strong>Baking Time:</strong><br>
                     {{ recipe.baking_time }} (minutes)
@@ -31,7 +42,12 @@
                     <strong>Baking Instructions</strong><br>
                     {{ recipe.instruction_one }}
                 </p>
+                <div class="col s3">
+                    <a href="" class="btn-small purple darken-2">Edit</a>
+                    <a href="" class="btn-small red darken-1">Delete</a>
+                </div>
             </div>
+            
         </li>
         {% endfor %}
     </ul>
