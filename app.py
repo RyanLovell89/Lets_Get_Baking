@@ -23,8 +23,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    recipes = mongo.db.recipes.find()
-    return render_template("index.html", recipes=recipes)
+    return render_template("index.html")
 
 
 # sign up function
@@ -123,8 +122,7 @@ def add_recipe():
 # search function
 @app.route("/recipe_book", methods=["GET", "POST"])
 def recipe_book():
-    query = request.form.get("query")
-    recipes = (mongo.db.recipes.find({"$text": {"$search": query}}))
+    recipes = list(mongo.db.recipes.find())
     return render_template("recipe_book.html", recipes=recipes)
 
 

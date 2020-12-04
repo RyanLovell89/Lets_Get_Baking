@@ -11,22 +11,4 @@
     </p>
 </div>
 
-<div>
-    {% for recipe in recipes %}
-        <h5>Recipe Name</h5>
-            {{ recipe.recipe_name }}
-        <h5>Recipe Description</h5>
-            {{ recipe.recipe_description }}
-        <h5>Baking Time (mins)</h5>
-            {{ recipe.baking_time }}
-        <h5>Preparation Time (mins)</h5>
-            {{ recipe.preparation_time }}
-        <h5>Ingredients</h5>
-        <ol>
-            <li>{{ recipe.ingredient_one }} - {{ recipe.weight_one }}</li>
-        </ol>
-        <p>Added by:<strong> {{ recipe.added_by }}</strong></p>
-    {% endfor %}
-</div>
-
 {% endblock %}
