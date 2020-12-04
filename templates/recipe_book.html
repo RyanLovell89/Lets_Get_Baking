@@ -42,8 +42,12 @@
                     <strong>Baking Instructions</strong><br>
                     {{ recipe.instruction_one }}
                 </p>
+                <p>
+                    <strong>Added By:</strong><br>
+                    {{ recipe.added_by }}
+                </p>
                 <div class="col s3">
-                    <a href="" class="btn-small purple darken-2">Edit</a>
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn-small purple darken-2">Edit</a>
                     <a href="" class="btn-small red darken-1">Delete</a>
                 </div>
             </div>
