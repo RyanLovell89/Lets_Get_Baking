@@ -122,8 +122,30 @@ def add_recipe():
 # edit function
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    if request.method == "POST":
+        edit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "baking_time": request.form.get("baking_time"),
+            "preparation_time": request.form.get("preparation_time"),
+            "ingredient_one": request.form.get("ingredient_one"),
+            "weight_one": request.form.get("weight_one"),
+            "instruction_one": request.form.get("instruction_one"),
+            "added_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit)
+        flash("Your Recipe Has Been Edited")
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("edit_recipe.html", recipe=recipe)
+
+
+# delete function
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Your Recipe Has Been Deleted")
+    return redirect(url_for("recipe_book"))
 
 
 # search function
