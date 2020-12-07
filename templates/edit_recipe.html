@@ -44,7 +44,7 @@
                 <h4>Ingredients</h4>
                 <br>
                 <div class="row">
-                <!-- ingredient -->
+                <!-- ingredients -->
                     <div class="col s6">
                         <i class="fas fa-egg prefix"></i>
                         <input id="ingredient_one" name="ingredient_one" minlength="1" maxlength="50"
@@ -52,7 +52,7 @@
                         <label for="ingredient_one">Ingredient</label>
                     </div>
                     <div class="col s6">
-                <!-- weight -->
+                <!-- weights -->
                         <i class="fas fa-weight-hanging prefix"></i>
                         <input id="weight_one" name="weight_one" minlength="1" maxlength="20"
                              value="{{ recipe.weight_one }}" type="text" class="validate" required>
@@ -61,7 +61,7 @@
                 </div>
                 <h4>Cooking Instructions</h4>
                 <div class="row">
-                <!-- instruction -->
+                <!-- instructions -->
                     <div class="input-field col s12">
                         <i class="fas fa-pen prefix"></i>
                         <textarea id="instruction_one" name="instruction_one" minlength="5"
@@ -72,9 +72,10 @@
                     </div>
                 </div>
                 <div class="row">
-                <!-- submit and reset button -->
-                    <div class="col s12 m8 offset-m4 center-align">
+                <!-- submit and cancel buttons -->
+                    <div class="col s12 center-align">
                         <button type="submit" class="col s6 btn-large purple darken-2">Edit Recipe</button>
+                        <a href="{{ url_for('recipe_book') }}" class="col s6 btn-large red darken-1">Cancel</a>
                     </div>
                 </div>
             </form>
