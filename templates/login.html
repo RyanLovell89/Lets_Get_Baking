@@ -2,8 +2,8 @@
 {% block content %}
 
 <div class="row">
-    <div class="card-panel col s12 m8 offset-m2 login-panel-styling">
-        <form method="POST" action="{{ url_for('login') }}">
+    <div class="card-panel col s12 m8 offset-m2 login-sign-up-panel-styling">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <h2 class="header center-align">Log In</h2>
                 <!-- username -->
                 <div class="row">
@@ -27,13 +27,13 @@
                 <div class="row">
                     <div class="col s3"></div>
                     <button type="submit" class="col s6 btn-large">
-                    <i class="fas fa-sign-in-alt prefix"></i>
                          Login
+                        <i class="fas fa-sign-in-alt"></i>
                     </button>
                     <div class="col s3"></div>
                 </div>
                 <div class="row">
-                    <p class="sign-up-link">
+                    <p class="sign-up-login-link">
                         Not signed up, <a href="{{ url_for('sign_up') }}">Sign Up Here</a>
                     </p>
                 </div>

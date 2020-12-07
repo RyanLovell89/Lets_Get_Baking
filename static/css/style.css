@@ -28,8 +28,8 @@
     opacity: 0.8;
 }
 
-/* login page */
-.login-panel-styling {
+/* login, sign up page */
+.login-sign-up-panel-styling {
     opacity: 0.8;
     margin-top: 40px;
 }
@@ -39,7 +39,7 @@
     opacity: 1;
 }
 
-.sign-up-link {
+.sign-up-login-link {
     font-size: 20px;
     text-align: center;
     color: black
