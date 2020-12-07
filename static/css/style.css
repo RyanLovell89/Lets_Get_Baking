@@ -17,14 +17,15 @@
     font-size: 20px;
 }
 
-/* footer */
+/* page and footer */
 
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-image: url("../../static/images/cake-background.jpg");
   }
 
-  main {
+main {
     flex: 1 0 auto;
   }
