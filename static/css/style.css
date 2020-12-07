@@ -28,7 +28,24 @@
     opacity: 0.8;
 }
 
-/* recipe page  */
+/* login page */
+.login-panel-styling {
+    opacity: 0.8;
+    margin-top: 40px;
+}
+
+.btn-large {
+    background-color: #388e3c;
+    opacity: 1;
+}
+
+.sign-up-link {
+    font-size: 20px;
+    text-align: center;
+    color: black
+}
+
+/* recipe book page  */
 
 .recipe_name_heading {
     font-weight: bold;
