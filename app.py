@@ -148,10 +148,18 @@ def delete_recipe(recipe_id):
     return redirect(url_for("recipe_book"))
 
 
-# search function
+# recipe book
 @app.route("/recipe_book", methods=["GET", "POST"])
 def recipe_book():
     recipes = list(mongo.db.recipes.find())
+    return render_template("recipe_book.html", recipes=recipes)
+
+
+# search function
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipe_book.html", recipes=recipes)
 
 
