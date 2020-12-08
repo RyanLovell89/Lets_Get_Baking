@@ -6,8 +6,12 @@
 
 /* flash messages */
 
-.flashes h4 {
-    line-height: 3px;
+.flash-message {
+    text-align: center;
+    color: black;
+    background-color: white;
+    opacity: 0.8;
+    padding-bottom: 0.5px;
 }
 
 /* index page */
