@@ -1,10 +1,10 @@
-/* mobile nav */
+/* --------------------------- mobile nav --------------------------------- */
 
 .text-color {
-    color: #7b1fa2;
+    color: #d84315;
 }
 
-/* flash messages */
+/* -------------------------- flash messages -------------------------------- */
 
 .flash-message {
     text-align: center;
@@ -14,7 +14,7 @@
     padding-bottom: 0.5px;
 }
 
-/* index page */
+/* ------------------------- index page -------------------------------- */
 
 .intro-header {
     font-size: 40px;
@@ -33,7 +33,7 @@
     opacity: 0.8;
 }
 
-/* login, sign up page */
+/* --------------- login, sign up page ----------------- */
 
 .login-sign-up-panel {
     opacity: 0.8;
@@ -51,7 +51,7 @@
     color: black
 }
 
-/* recipe book page  */
+/* ------------------ recipe book page ------------------------ */
 
 .recipe-intro-panel {
     opacity: 0.8;
@@ -78,12 +78,21 @@
     margin-top: 20px;
 }
 
-.recipe_name_heading {
-    font-weight: bold;
-    font-size: 20px;
+.btn {
+    background-color: #388e3c;
 }
 
-/* background image and footer */
+.recipe-information {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.recipe_name_heading {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* ---------------------------- background image and footer ------------------------ */
 
 body {
     display: flex;
