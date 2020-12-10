@@ -125,6 +125,13 @@ h4 {
     margin-bottom: 50px;
 }
 
+/* ---------------------------- profile --------------------------------------- */
+
+.profile-card-panel {
+    opacity: 0.8;
+    margin-top: 40px
+}
+
 /* ---------------------------- background image and footer ------------------------ */
 
 body {
