@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- username information -->
 <div class="row">
     <div class="col s12 m8 offset-m2">
             <div class="card-panel profile-card-panel">
@@ -11,6 +12,11 @@
     </div>
 </div>
 
+<!-- profile information -->
+<div>
+</div>
+
+<!-- displays recipes, only signed users -->
 <div>
     <ul class="collapsible popout recipes-card-panel">
         {% for recipe in recipes %}

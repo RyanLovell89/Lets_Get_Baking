@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- intro -->
 <div class="row">
     <div class="card-panel col s12 m8 offset-m2 recipe-intro-panel">
         <h2 class="recipe-page-heading">Recipe Book</h2>
@@ -10,6 +11,7 @@
     </div>
 </div>
 
+<!-- search -->
 <div class="row">
     <div class="card-panel col s12 m12 search-card-panel">
         <form action="{{ url_for('search') }}" method="POST" class="col s12">
@@ -28,6 +30,7 @@
     </div>
 </div>
 
+<!-- displays all recipe -->
 <div>
     {% if recipes|length > 0 %}
     <ul class="collapsible popout recipes-card-panel">
@@ -71,6 +74,7 @@
         </li>
         {% endfor %}
     </ul>
+    <!-- search message -->
     {% else %}
         <h3 class="flash-message">No Results Found</h3>
     {% endif %}

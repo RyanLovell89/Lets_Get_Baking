@@ -1,86 +1,87 @@
 {% extends "base.html" %}
 {% block content %}
-    
-    <div class="row">
-            <div class="card-panel col s12 add-recipe-card-panel">
-                <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
-                    <h2 class="add-recipe-heading">Add Recipe</h2>
-                    <div class="row">
-                    <!-- recipe name -->
-                        <div class="input-field col s12">
-                            <i class="fas fa-pen prefix"></i>
-                            <input id="recipe_name" name="recipe_name" minlength="4" maxlength="40"
-                                type="text" class="validate" required>
-                            <label for="recipe_name">Recipe Name</label>
-                        </div>
+
+<!-- recipe input form -->
+<div class="row">
+        <div class="card-panel col s12 add-recipe-card-panel">
+            <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+                <h2 class="add-recipe-heading">Add Recipe</h2>
+                <div class="row">
+                <!-- recipe name -->
+                    <div class="input-field col s12">
+                        <i class="fas fa-pen prefix"></i>
+                        <input id="recipe_name" name="recipe_name" minlength="4" maxlength="40"
+                            type="text" class="validate" required>
+                        <label for="recipe_name">Recipe Name</label>
                     </div>
-                    <div class="row">
-                    <!-- recipe description -->
-                        <div class="input-field col s12">
-                            <i class="fas fa-pen prefix"></i>
-                            <textarea id="recipe_description" name="recipe_description" minlength="5"
-                                maxlength="200" class="materialize-textarea" required></textarea>
-                            <label for="recipe_description">Recipe Description</label>
-                        </div>
+                </div>
+                <div class="row">
+                <!-- recipe description -->
+                    <div class="input-field col s12">
+                        <i class="fas fa-pen prefix"></i>
+                        <textarea id="recipe_description" name="recipe_description" minlength="5"
+                            maxlength="200" class="materialize-textarea" required></textarea>
+                        <label for="recipe_description">Recipe Description</label>
                     </div>
-                    <div class="row">
-                    <!-- baking time -->
-                        <div class="col s6">
-                            <i class="fas fa-clock prefix"></i>
-                            <input id="baking_time" name="baking_time" minlength="1" maxlength="20"
-                                type="text" class="validate" required>
-                            <label for="recipe_name">Baking Time (minutes)</label>
-                        </div>
-                        <div class="col s6">
-                    <!-- preparation time -->
-                            <i class="fas fa-clock prefix"></i>
-                            <input id="preparation_time" name="preparation_time" minlength="1" maxlength="20"
-                                type="text" class="validate" required>
-                            <label for="preparation_time">Preparation Time (minutes)</label>
-                        </div>
+                </div>
+                <div class="row">
+                <!-- baking time -->
+                    <div class="col s6">
+                        <i class="fas fa-clock prefix"></i>
+                        <input id="baking_time" name="baking_time" minlength="1" maxlength="20"
+                            type="text" class="validate" required>
+                        <label for="recipe_name">Baking Time (minutes)</label>
                     </div>
-                    <h4>Ingredients</h4>
-                    <br>
-                    <div class="row">
-                    <!-- ingredient -->
-                        <div class="col s6">
-                            <i class="fas fa-egg prefix"></i>
-                            <input id="ingredient_one" name="ingredient_one" minlength="1" maxlength="50"
-                                type="text" class="validate" required>
-                            <label for="ingredient_one">Ingredient</label>
-                        </div>
-                        <div class="col s6">
-                    <!-- weight -->
-                            <i class="fas fa-weight-hanging prefix"></i>
-                            <input id="weight_one" name="weight_one" minlength="1" maxlength="20"
-                                type="text" class="validate" required>
-                            <label for="weight_one">Weight/Amount</label>
-                        </div>
+                    <div class="col s6">
+                <!-- preparation time -->
+                        <i class="fas fa-clock prefix"></i>
+                        <input id="preparation_time" name="preparation_time" minlength="1" maxlength="20"
+                            type="text" class="validate" required>
+                        <label for="preparation_time">Preparation Time (minutes)</label>
                     </div>
-                    <h4>Cooking Instructions</h4>
-                    <div class="row">
-                    <!-- instruction -->
-                        <div class="input-field col s12">
-                            <i class="fas fa-pen prefix"></i>
-                            <textarea id="instruction_one" name="instruction_one" minlength="5"
-                                maxlength="300" class="materialize-textarea" required></textarea>
-                            <label for="instruction_one">Step 1</label>
-                        </div>
+                </div>
+                <h4>Ingredients</h4>
+                <br>
+                <div class="row">
+                <!-- ingredient -->
+                    <div class="col s6">
+                        <i class="fas fa-egg prefix"></i>
+                        <input id="ingredient_one" name="ingredient_one" minlength="1" maxlength="50"
+                            type="text" class="validate" required>
+                        <label for="ingredient_one">Ingredient</label>
                     </div>
-                    <div class="row">
-                    <!-- submit and reset button -->
-                        <div class="col s1"></div>
-                            <button type="submit" class="col s4 btn-large green darken-2">
-                                Add Recipe <i class="fas fa-plus-circle"></i>
-                            </button>
-                        <div class="col s2"></div>
-                            <button type="reset" class="col s4 btn-large red darken-1">
-                                Reset <i class="fas fa-times-circle prefix"></i>
-                            </button>
-                        <div class="col s1"></div>
+                    <div class="col s6">
+                <!-- weight -->
+                        <i class="fas fa-weight-hanging prefix"></i>
+                        <input id="weight_one" name="weight_one" minlength="1" maxlength="20"
+                            type="text" class="validate" required>
+                        <label for="weight_one">Weight/Amount</label>
                     </div>
-                </form>
-            </div>
-    </div>
+                </div>
+                <h4>Cooking Instructions</h4>
+                <div class="row">
+                <!-- instruction -->
+                    <div class="input-field col s12">
+                        <i class="fas fa-pen prefix"></i>
+                        <textarea id="instruction_one" name="instruction_one" minlength="5"
+                            maxlength="300" class="materialize-textarea" required></textarea>
+                        <label for="instruction_one">Step 1</label>
+                    </div>
+                </div>
+                <div class="row">
+                <!-- submit and reset button -->
+                    <div class="col s1"></div>
+                        <button type="submit" class="col s4 btn-large green darken-2">
+                            Add Recipe <i class="fas fa-plus-circle"></i>
+                        </button>
+                    <div class="col s2"></div>
+                        <button type="reset" class="col s4 btn-large red darken-1">
+                            Reset <i class="fas fa-times-circle prefix"></i>
+                        </button>
+                    <div class="col s1"></div>
+                </div>
+            </form>
+        </div>
+</div>
 
 {% endblock %}
