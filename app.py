@@ -148,7 +148,9 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Your Recipe Has Been Deleted")
-    return redirect(url_for("recipe_book"))
+    username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+    return redirect(url_for("profile", username=username))
 
 
 # recipe book
