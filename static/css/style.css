@@ -82,6 +82,11 @@
     background-color: #388e3c;
 }
 
+.recipes-card-panel {
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
 .recipe-information {
     font-size: 20px;
     font-weight: 550;
@@ -91,6 +96,15 @@
     font-weight: bold;
     font-size: 30px;
 }
+
+/* ---------------------------- add recipe ----------------------------- */
+
+.add-recipe-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
 
 /* ---------------------------- background image and footer ------------------------ */
 

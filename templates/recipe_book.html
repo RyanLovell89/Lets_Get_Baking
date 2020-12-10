@@ -30,7 +30,7 @@
 
 <div>
     {% if recipes|length > 0 %}
-    <ul class="collapsible popout search-card-panel">
+    <ul class="collapsible popout recipes-card-panel">
         {% for recipe in recipes %}
         <li>
             <div class="collapsible-header grey lighten-3">
@@ -78,7 +78,7 @@
         {% endfor %}
     </ul>
     {% else %}
-        <h3 class="center-align">No Results Found</h3>
+        <h3 class="flash-message">No Results Found</h3>
     {% endif %}
 </div>
 
