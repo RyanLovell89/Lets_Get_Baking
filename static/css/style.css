@@ -132,6 +132,12 @@ h4 {
     margin-top: 40px
 }
 
+.profile-intro {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
 /* ---------------------------- background image and footer ------------------------ */
 
 body {
