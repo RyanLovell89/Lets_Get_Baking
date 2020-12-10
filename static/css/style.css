@@ -104,7 +104,22 @@
     margin-bottom: 50px;
 }
 
+.add-recipe-card-panel {
+    opacity: 0.8;
+    margin-top: 40px;
+}
 
+/* ---------------------------- edit recipe--------------------------------- */
+
+.edit-recipe-card-panel {
+    opacity: 0.8;
+    margin-top: 40px;
+}
+
+.edit-recipe-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
 /* ---------------------------- background image and footer ------------------------ */
 
