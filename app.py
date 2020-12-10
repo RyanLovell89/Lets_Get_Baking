@@ -84,7 +84,8 @@ def login():
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    recipes = list(mongo.db.recipes.find())
+    return render_template("profile.html", username=username, recipes=recipes)
 
 
 # logout function
@@ -135,6 +136,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit)
         flash("Your Recipe Has Been Edited")
+        # takes the user back to the recipe book
         return redirect(url_for("recipe_book"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
