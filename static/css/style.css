@@ -14,6 +14,10 @@
     padding-bottom: 0.5px;
 }
 
+h4 {
+    padding-top: 8px;
+}
+
 /* ------------------------- index page -------------------------------- */
 
 .intro-header {
