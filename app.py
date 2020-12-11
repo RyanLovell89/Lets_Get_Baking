@@ -106,8 +106,29 @@ def add_recipe():
             "baking_time": request.form.get("baking_time"),
             "preparation_time": request.form.get("preparation_time"),
             "ingredient_one": request.form.get("ingredient_one"),
+            "ingredient_two": request.form.get("ingredient_two"),
+            "ingredient_three": request.form.get("ingredient_three"),
+            "ingredient_four": request.form.get("ingredient_four"),
+            "ingredient_five": request.form.get("ingredient_five"),
+            "ingredient_six": request.form.get("ingredient_six"),
+            "ingredient_seven": request.form.get("ingredient_seven"),
+            "ingredient_eight": request.form.get("ingredient_eight"),
             "weight_one": request.form.get("weight_one"),
+            "weight_two": request.form.get("weight_two"),
+            "weight_three": request.form.get("weight_three"),
+            "weight_four": request.form.get("weight_four"),
+            "weight_five": request.form.get("weight_five"),
+            "weight_six": request.form.get("weight_six"),
+            "weight_seven": request.form.get("weight_seven"),
+            "weight_eight": request.form.get("weight_eight"),
+            "weight_nine": request.form.get("weight_nine"),
+            "weight_ten": request.form.get("weight_ten"),
             "instruction_one": request.form.get("instruction_one"),
+            "instruction_two": request.form.get("instruction_two"),
+            "instruction_three": request.form.get("instruction_three"),
+            "instruction_four": request.form.get("instruction_four"),
+            "instruction_five": request.form.get("instruction_five"),
+            "instruction_six": request.form.get("instruction_six"),
             "added_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
@@ -130,14 +151,35 @@ def edit_recipe(recipe_id):
             "baking_time": request.form.get("baking_time"),
             "preparation_time": request.form.get("preparation_time"),
             "ingredient_one": request.form.get("ingredient_one"),
+            "ingredient_two": request.form.get("ingredient_two"),
+            "ingredient_three": request.form.get("ingredient_three"),
+            "ingredient_four": request.form.get("ingredient_four"),
+            "ingredient_five": request.form.get("ingredient_five"),
+            "ingredient_six": request.form.get("ingredient_six"),
+            "ingredient_seven": request.form.get("ingredient_seven"),
+            "ingredient_eight": request.form.get("ingredient_eight"),
             "weight_one": request.form.get("weight_one"),
+            "weight_two": request.form.get("weight_two"),
+            "weight_three": request.form.get("weight_three"),
+            "weight_four": request.form.get("weight_four"),
+            "weight_five": request.form.get("weight_five"),
+            "weight_six": request.form.get("weight_six"),
+            "weight_seven": request.form.get("weight_seven"),
+            "weight_eight": request.form.get("weight_eight"),
             "instruction_one": request.form.get("instruction_one"),
+            "instruction_two": request.form.get("instruction_two"),
+            "instruction_three": request.form.get("instruction_three"),
+            "instruction_four": request.form.get("instruction_four"),
+            "instruction_five": request.form.get("instruction_five"),
+            "instruction_six": request.form.get("instruction_six"),
             "added_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit)
         flash("Your Recipe Has Been Edited")
-        # takes the user back to the recipe book
-        return redirect(url_for("recipe_book"))
+        # takes the user back to the profile
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        return redirect(url_for("profile", username=username))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("edit_recipe.html", recipe=recipe)
